@@ -15,7 +15,7 @@ body {
 
 h1 {
     font-size: 75px;
-    color: #0F9D58;
+    color: #1a0d8a;
 }
 
 .container {
@@ -64,7 +64,7 @@ h1 {
 }
 
 .box h2 {
-    color: #0F9D58;
+    color: #1a0d8a;
 }
 
 .box #controls {
@@ -95,7 +95,7 @@ h1 {
 }
 
 input[type="radio"]:checked+label {
-    color: #0F9D58;
+    color: #1a0d8a;
 }
 
 .box #controls .row:first-child div:last-child {
@@ -201,13 +201,13 @@ select {
     border-radius: .25rem;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
     color: #fff;
-    background-color: #0F9D58;
-    border-color: #0F9D58;
+    background-color: #1a0d8a;
+    border-color: #1a0d8a;
 }
 
 #submit:hover {
-    background-color: #11ab61;
-    border-color: #11ab61;
+    background-color: #1a0d8a;
+    border-color: #1a0d8a;
 }
 
 .box textarea {
