@@ -1,4 +1,4 @@
-// Get the element from DOM
+// Getting elements from the Dom
 const form = document.getElementById("controls");
 const hInput = document.querySelector("#heading-input");
 const hOutput = document.querySelector("#heading-output");
@@ -11,7 +11,7 @@ const alphabet = document.getElementById("alphabet-input");
 const letterCase = document.getElementById("letter-case");
 const foreignChars = document.getElementById("foreign-chars");
 
-// Change the heading title and clear the content depending on whether to encode or decode
+// Change the heading title and clearing content when decode or encode
 selectEncodeOrDecode.forEach((option) => {
     option.addEventListener("click", () => {
         if (option.value === "encode") {
@@ -28,10 +28,10 @@ selectEncodeOrDecode.forEach((option) => {
     });
 });
 
-// When the click submit it will perform caesar cipher
+// When we click submit button it will perform caesar cipher algorithm
 form.addEventListener("submit", (event) => {
     event.preventDefault();
-    
+
     // Get the value of from the DOM
     let inputTextValue = inputText.value;
     let selectedOption = Array.from(selectEncodeOrDecode).find((option) => option.checked);
@@ -61,9 +61,8 @@ form.addEventListener("submit", (event) => {
         if (foreignChars == 1) {
             text = removeForeignChars(text);
         }
-        // Make the character set a lowercase
+        // Making character set a lowercase
         charset = charset.toLowerCase();
-        // Store the results
         let result = "";
         for (let i = 0; i < text.length; i++) {
             let char = text.charAt(i);
@@ -72,7 +71,7 @@ form.addEventListener("submit", (event) => {
             // If the character is in the set, perform the shift operation
             if (index !== -1) {
                 let newIndex = (index + shift) % mod;
-                // If the new index is negative, add the modulus to wrap around to the correct position
+                // If the new index is negative, add the modulus to the correct position
                 if (newIndex < 0) {
                     newIndex += mod;
                 }
@@ -106,6 +105,6 @@ form.addEventListener("submit", (event) => {
     else if (letterCaseValue == 3) {
         cipherOutput = cipherOutput.toUpperCase();
     }
-    // Show the ouput in the ouput textarea 
+    //for output in text area
     outputText.textContent = cipherOutput;
 });
